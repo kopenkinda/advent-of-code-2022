@@ -1,8 +1,8 @@
-function step1() {
+function step1(input: string) {
   return 0;
 }
 
-function step2() {
+function step2(input: string) {
   return 0;
 }
 

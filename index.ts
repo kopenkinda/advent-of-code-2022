@@ -1,5 +1,6 @@
 import { readdir } from "fs/promises";
 import path from "path";
+import { readInput } from "./utils";
 
 async function main() {
   const dir = await readdir(".");
@@ -10,11 +11,12 @@ async function main() {
   for (const step of steps) {
     idx += 1;
     console.log(`Day ${idx}:`);
+    const input = readInput(idx);
     if ("step1" in step) {
-      console.log(`Step 1: ${await step.step1()}`);
+      console.log(`Step 1: ${await step.step1(input)}`);
     }
     if ("step2" in step) {
-      console.log(`Step 2: ${await step.step2()}`);
+      console.log(`Step 2: ${await step.step2(input)}`);
     }
     console.log();
   }

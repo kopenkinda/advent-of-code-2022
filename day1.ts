@@ -1,18 +1,18 @@
 import { readInput } from "./utils";
 
-async function step1() {
-  const input = readInput(1)
+async function step1(input: string) {
+  const sums = input
     .split("\n\n")
-    .map((x) => x.split("\n").map((x) => +x));
-  const sums = input.map((x) => x.reduce((a, b) => a + b, 0));
+    .map((x) => x.split("\n").map((x) => +x))
+    .map((x) => x.reduce((a, b) => a + b, 0));
   return Math.max(...sums);
 }
 
-async function step2() {
-  const input = readInput(1)
+async function step2(input: string) {
+  const sums = input
     .split("\n\n")
-    .map((x) => x.split("\n").map((x) => +x));
-  const sums = input.map((x) => x.reduce((a, b) => a + b, 0));
+    .map((x) => x.split("\n").map((x) => +x))
+    .map((x) => x.reduce((a, b) => a + b, 0));
   return sums
     .sort((a, b) => b - a)
     .slice(0, 3)
