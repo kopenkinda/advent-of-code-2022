@@ -7,6 +7,7 @@ async function step1() {
   const sums = input.map((x) => x.reduce((a, b) => a + b, 0));
   return Math.max(...sums);
 }
+
 async function step2() {
   const input = readInput(1)
     .split("\n\n")
@@ -18,7 +19,7 @@ async function step2() {
     .reduce((a, b) => a + b, 0);
 }
 
-(async function main() {
-  console.log(await step1());
-  console.log(await step2());
-})();
+export default {
+  step1,
+  step2,
+};

@@ -1,7 +1,6 @@
 {
   "name": "advent-of-code-2022",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:kopenkinda/advent-of-code-2022.git",
   "author": "Dmitrii <kopenkin.da@gmail.com>",
   "license": "MIT",
