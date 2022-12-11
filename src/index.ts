@@ -3,9 +3,9 @@ import path from "path";
 import { readInput } from "./utils";
 
 async function main() {
-  const dir = await readdir(".");
+  const dir = await readdir("./src");
   const days = dir.filter((x) => x.startsWith("day"));
-  const modules = days.map((x) => import(path.join(process.cwd(), x)));
+  const modules = days.map((x) => import(path.join(process.cwd(), "src", x)));
   const steps = (await Promise.all(modules)).map((module) => module.default);
   let idx = 0;
   for (const step of steps) {
